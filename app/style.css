@@ -1,6 +1,7 @@
 /* General */
 *{
-    text-align: center;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h4 {
@@ -15,11 +16,22 @@ button {
     border-radius: 30px;
 }
 
+h3 {
+    display: inline;
+    padding-top: 0px;
+    margin: 0px;
+    text-align: top left;
+}
+
+p {
+    margin: 0px;
+    font-size: x-small;
+}
 /* classes for grid*/
 .grid-box {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: #aca8a8;
+    background-color: #C4DFDF;
     padding: 10px;
     gap: 30px;
 
@@ -28,14 +40,15 @@ button {
 .grid-item {
     margin: 30px ;
     padding-top: 3px;
-    background-color: #faf7f1;
+    background-color: #F1F0E8;
     border-radius: 5px;
     width: 230px;
     height: 250px;
 }
 
+/* Top layer */
 .mid {
-    background-color: #ccb2e4;
+    background-color: #e5daee;
     margin: 5px 5px 10px 5px;
     border-radius: 5px 5px 0px 0px;
     height: 180px;
@@ -45,53 +58,77 @@ button {
 .top-layer {
     display: flex;
     justify-content: space-between; 
-    padding: 10px 20px;
+    padding: 15px 15px;
 }
 
+/* mid content */
 .mid-layer {
-    text-align: left;
+    height: 125px;
+    padding: 0px 15px;
 }
 
+.arrow {
+    display: flex;
+    justify-content: end;
+}
 
-h3 {
-    display: inline;
-    padding-top: 0px;
-    margin: 0px;
-    text-align: top left;
-}
-.content h3 {
-    position: top right;
-}
+/* dot container */
 .circle-container {
-    display: block;
-    width: 20px;
+    margin-top: 50px;
+    text-align: center;
     height: 30px;
-}
-.circle-container circle {
-    width: 10px;
-    height: 10px;
-    background-color: black;
+    width: auto;
 }
 
-.img {
-    background-color: antiquewhite;
-    width: 25px;
-    height: 25px;
+.circle {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: grey;
     border-radius: 50%;
 }
 
+.circle-container :first-child {
+    background-color: black;
+}
+
+
+
+/* Bottom container */
 .bottom-layer {
     display:flex;
     justify-content: space-evenly;
 }
 
-.bottom-layer heading {
-    padding-bottom: 50px;
+.heading {
+    margin-right: 30px;
+}
+/* bottom image */
+.img {
+    background-color: #e6dbc3;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 991px) {
     .grid-box {
-        display: block;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-box {
+        margin: 10px;
+        gap: 10px;
+        
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .grid-box {
+        grid-template-columns: 1fr;
 
     }
 }
